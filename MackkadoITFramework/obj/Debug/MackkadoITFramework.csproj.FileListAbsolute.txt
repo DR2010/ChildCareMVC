@@ -1,0 +1,30 @@
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.pdb
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\obj\Debug\MackkadoITFramework.dll
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\obj\Debug\MackkadoITFramework.pdb
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll.config
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\obj\Debug\MackkadoITFramework.dll
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\obj\Debug\MackkadoITFramework.pdb
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll.config
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MackkadoITFramework.pdb
+C:\Users\MACHADO\Dropbox\FCM - MySQL\MackkadoITFramework\bin\Debug\MySql.Data.dll
+C:\I_Daniel\Dropbox\FCM - MySQL\MackkadoITFramework\obj\Debug\MackkadoITFramework.csprojResolveAssemblyReference.cache
+C:\I_Daniel\Dropbox\FCM - MySQL - Final\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll.config
+C:\I_Daniel\Dropbox\FCM - MySQL - Final\MackkadoITFramework\bin\Debug\MackkadoITFramework.dll
+C:\I_Daniel\Dropbox\FCM - MySQL - Final\MackkadoITFramework\bin\Debug\MackkadoITFramework.pdb
+C:\I_Daniel\Dropbox\FCM - MySQL - Final\MackkadoITFramework\obj\Debug\MackkadoITFramework.dll
+C:\I_Daniel\Dropbox\FCM - MySQL - Final\MackkadoITFramework\obj\Debug\MackkadoITFramework.pdb
+C:\Program Files\FCM\MackkadoITFramework.dll.config
+C:\Program Files\FCM\MackkadoITFramework.dll
+C:\Program Files\FCM\MackkadoITFramework.pdb
+C:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.csprojResolveAssemblyReference.cache
+C:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.csproj.ResolveComReference.cache
+C:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.dll
+C:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.pdb
+D:\Program Files\FCM\MackkadoITFramework.dll.config
+D:\Program Files\FCM\MackkadoITFramework.dll
+D:\Program Files\FCM\MackkadoITFramework.pdb
+D:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.csproj.ResolveComReference.cache
+D:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.dll
+D:\I_Daniel\Dropbox\FCMMySQLGit\MackkadoITFramework\obj\Debug\MackkadoITFramework.pdb

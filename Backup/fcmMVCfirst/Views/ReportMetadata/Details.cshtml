@@ -1,0 +1,49 @@
+﻿@model FCMMySQLBusinessLibrary.ReportMetadata
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ReportMetadata</legend>
+    <div class="display-label">
+        UID: <b class="display-field">@Html.DisplayFor(model => model.UID)</b></div>
+    <div class="display-label">
+        RecordType: <b class="display-field">@Html.DisplayFor(model => model.RecordType)</b></div>
+    <div class="display-label">
+        FieldCode: <b class="display-field">@Html.DisplayFor(model => model.FieldCode)</b></div>
+    <div class="display-label">
+        ClientType: <b class="display-field">@Html.DisplayFor(model => model.ClientType)</b></div>
+    <div class="display-label">
+        ClientUID: <b class="display-field">@Html.DisplayFor(model => model.ClientUID)</b></div>
+    <div class="display-label">
+        Description: <b class="display-field">@Html.DisplayFor(model => model.Description)</b></div>
+    <div class="display-label">
+        InformationType:<b class="display-field"> @Html.DisplayFor(model => model.InformationType)</b></div>
+    <div class="display-label">
+        TableName: <b class="display-field">@Html.DisplayFor(model => model.TableName)</b></div>
+    <div class="display-label">
+        FieldName: <b class="display-field">
+        @Html.DisplayFor(model => model.FieldName)</b></div>
+    <div class="display-label">
+        FilePath: <b class="display-field">
+            @Html.DisplayFor(model => model.FilePath)</b></div>
+    <div class="display-label">
+        FileName: <b class="display-field">
+            @Html.DisplayFor(model => model.FileName)</b></div>
+    <div class="display-label">
+        Condition: <b class="display-field">
+            @Html.DisplayFor(model => model.Condition)</b></div>
+    <div class="display-label">
+        CompareWith: <b class="display-field">
+            @Html.DisplayFor(model => model.CompareWith)</b></div>
+    <div class="display-label">
+        UseAsLabel: <b class="display-field">
+            @Html.DisplayFor(model => model.UseAsLabel)</b></div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", "ReportMetadata", Model, new { @ReportMetadata = "ReportMetadata" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

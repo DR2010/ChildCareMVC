@@ -1,0 +1,8 @@
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\bin\Release\MackkadoITFramework.dll.config
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\bin\Release\MackkadoITFramework.dll
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\bin\Release\MackkadoITFramework.pdb
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\bin\Release\MySql.Data.dll
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\obj\Release\MackkadoITFramework.csprojResolveAssemblyReference.cache
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\obj\Release\MackkadoITFramework.csproj.ResolveComReference.cache
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\obj\Release\MackkadoITFramework.dll
+D:\I_Daniel\Dropbox\I_Projects\Childcare\ChildCareMVC\MackkadoITFramework\obj\Release\MackkadoITFramework.pdb

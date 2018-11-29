@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<FCM>
+  <ConnectionString>Data Source=LAPTOPHP;Initial Catalog=management;Persist Security info=false;integrated security=sspi;</ConnectionString>
+</FCM>

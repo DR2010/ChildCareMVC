@@ -1,0 +1,74 @@
+﻿@model MackkadoITFramework.Security.SecurityUserRole
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Security User Roles</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "SecurityUserRole", new { id = Model.FK_UserID }, null)
+    
+    @* The syntax below is important!!! The last null makes .net call the correct method to pass the information correctly. *@ 
+    @* @Html.ActionLink("Create New", "Create", "CodeValue", new { id = Model.ListForCodeType }, null) *@ 
+</p>
+<p>
+    User ID: @Html.DisplayFor(modelItem => Model.FK_UserID) 
+</p>
+<table>
+    <tr>
+        <th>
+            UniqueID
+        </th>
+        <th>
+            User ID
+        </th>
+        <th>
+            FK Role
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+            Is Active
+        </th>
+        <th>
+            Is Void
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.securityUserRoles)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniqueID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FK_UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FK_Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsVoid)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", "SecurityUserRole", item, new { @SecurityUserRole = "SecurityUserRole" }) 
+        </td>
+    </tr>
+}
+
+</table>

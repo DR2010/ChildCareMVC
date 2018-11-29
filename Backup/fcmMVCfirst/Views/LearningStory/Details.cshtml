@@ -1,0 +1,139 @@
+﻿@using MackkadoITFramework.ReferenceData
+@model fcmMVCfirst.Models.LearningStory
+@{
+    ViewBag.Title = "Learning Story Details";
+}
+<h2>Details</h2>
+<fieldset>
+    <legend>Learning Story</legend>
+    <div class="display-label">UID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UID)
+    </div>
+    Child ID and Name
+    <div class="display-field">
+        ID: @Html.DisplayFor(model => model.FKChildUID) ==> Name: @Html.DisplayFor(model => model.child.FirstName);
+        DOB: @Html.DisplayFor(model => model.child.DateOfBirth)
+    </div>
+    <div class="display-label">Room Code</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FKRoomCode)
+    </div>
+    Educator ID and Name
+    <div class="display-field">
+        ID: @Html.DisplayFor(model => model.FKEducatorUID) ==> Name: @Html.DisplayFor(model => model.educator.FirstName)
+    </div>
+    <div class="display-label">Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+    <div class="display-label">Story</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Story)
+    </div>
+    <div class="display-label">AnalysisOfLearning</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnalysisOfLearning)
+    </div>
+    <div class="display-label">ExtensionOfLearning</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExtensionOfLearning)
+    </div>
+    <div class="display-label">ParentsComments</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentsComments)
+    </div>
+
+    @foreach (var learningItem in CodeValue.ListCodeValues("LEAR"))
+    {
+
+        <h2>
+            @CodeValue.GetCodeValueDescription("LEAR", @learningItem.ID)
+        </h2>
+
+        <table>
+            @foreach (var item in RelatedCodeValue.ListS("LEARLESI", "LEAR", @learningItem.ID))
+            {
+                string n = "LESI," + @item.FKCodeValueTo;
+
+                var showChecked = false;
+                foreach (var learningOutcome in Model.LearningOutcomes)
+                {
+                    if (learningOutcome.FKCodeValue == item.FKCodeValueTo) { showChecked = true;}        
+                }
+                <tr>
+                    @if (showChecked) {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.FKCodeValueTo checked>
+                        <a href=@CodeValue.GetCodeValueExtended("LESI", item.FKCodeValueTo)>@CodeValue.GetCodeValueDescription("LESI", item.FKCodeValueTo)</a></td>
+                    } else {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.FKCodeValueTo >
+                        <a href=@CodeValue.GetCodeValueExtended("LESI", item.FKCodeValueTo)>@CodeValue.GetCodeValueDescription("LESI", item.FKCodeValueTo)</a></td>
+                    }
+                </tr>
+            }
+        </table>
+    }
+    <h2>Principles </h2>
+    <table>
+        @foreach (var item in CodeValue.ListCodeValues("PRIN"))
+        {
+            string n = "PRIN," + @item.ID;
+
+            var showChecked = false;
+            foreach (var principle in Model.Principles)
+            {
+                if (principle.FKCodeValue == item.ID) { showChecked = true; }
+            }
+            <tr>
+                @if (showChecked)
+                {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID checked>
+                        <a href=@CodeValue.GetCodeValueExtended("PRIN", item.ID)>@CodeValue.GetCodeValueDescription("PRIN", item.ID)
+                        </a></td>
+                                    }
+                else                 {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID>
+                        <a href=@CodeValue.GetCodeValueExtended("PRIN", item.ID)>@CodeValue.GetCodeValueDescription("PRIN", item.ID)
+                        </a></td>
+                                    }
+            </tr>
+        }
+    </table>
+    <h2>Practices </h2>
+    <table>
+        @foreach (var item in CodeValue.ListCodeValues("PRAC"))
+        {
+            string n = "PRAC," + @item.ID;
+
+            var showChecked = false;
+            foreach (var practice in Model.Practices)
+            {
+                if (practice.FKCodeValue == item.ID) { showChecked = true; }
+            }
+            
+            <tr>
+                @if (showChecked)
+                {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID checked>
+                        <a href=@CodeValue.GetCodeValueExtended("PRAC", item.ID)>@CodeValue.GetCodeValueDescription("PRAC", item.ID)
+                        </a></td>
+                                }
+                else
+                {
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID>
+                        <a href=@CodeValue.GetCodeValueExtended("PRAC", item.ID)>@CodeValue.GetCodeValueDescription("PRAC", item.ID)
+                        </a></td>
+                                                                }
+            </tr>
+        }
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index", new { id = Model.FKChildUID })
+</p>

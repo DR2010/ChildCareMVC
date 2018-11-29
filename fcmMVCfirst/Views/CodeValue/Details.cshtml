@@ -1,0 +1,36 @@
+﻿@model MackkadoITFramework.ReferenceData.CodeValue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CodeValue</legend>
+
+    <div class="display-label">FKCodeType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FKCodeType)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">Abbreviation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Abbreviation)
+    </div>
+
+    <div class="display-label">ValueExtended</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ValueExtended)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

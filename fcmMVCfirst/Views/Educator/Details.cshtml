@@ -1,0 +1,64 @@
+﻿@model fcmMVCfirst.Models.Educator
+
+@{
+    ViewBag.Title = "Educator Details";
+}
+
+<h2>Educator Details</h2>
+
+<fieldset>
+
+    <div class="display-label">UID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UID)
+    </div>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">Surname</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Surname)
+    </div>
+
+    <div class="display-label">WLVL_Level</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WLVL_Level)
+    </div>
+
+    <div class="display-label">UserIdCreatedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserIdCreatedBy)
+    </div>
+
+    <div class="display-label">UserIdUpdatedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserIdUpdatedBy)
+    </div>
+
+    <div class="display-label">CreationDateTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDateTime)
+    </div>
+
+    <div class="display-label">UpdateDateTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdateDateTime)
+    </div>
+
+    <div class="display-label">RecordVersion</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordVersion)
+    </div>
+
+    <div class="display-label">IsVoid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsVoid)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

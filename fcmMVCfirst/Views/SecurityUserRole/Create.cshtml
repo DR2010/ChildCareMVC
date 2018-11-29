@@ -1,0 +1,44 @@
+﻿@using MackkadoITFramework.ReferenceData
+@model MackkadoITFramework.Security.SecurityUserRole
+
+@{
+    ViewBag.Title = "Add Role to User";
+}
+
+<h2>Add Role to User</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>SecurityUserRole</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FK_UserID)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.FK_UserID, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FK_Role)
+        </div>
+        @Html.DropDownListFor(
+            model => model.FK_Role, 
+            new SelectList(CodeValue.ListCodeValues("ROLE"), "ID", "Description"),
+            "-- Select category --"
+        )
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@Html.ValidationSummary()

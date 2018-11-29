@@ -1,0 +1,56 @@
+﻿@model fcmMVCfirst.Models.Room
+
+@{
+    ViewBag.Title = "Room List";
+}
+
+<h2>Room List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            UID
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.roomList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+
+        @Html.HiddenFor(modelItem => item.UserIdCreatedBy)
+        @Html.HiddenFor(modelItem => item.UserIdUpdatedBy)
+        @Html.HiddenFor(modelItem => item.CreationDateTime)
+        @Html.HiddenFor(modelItem => item.UpdateDateTime)
+        @Html.HiddenFor(modelItem => item.RecordVersion)
+        @Html.HiddenFor(modelItem => item.IsVoid)
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.UID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.UID }) |
+            @Html.ActionLink("Children", "Index", "Child", new { id = item.UID }, null) 
+
+        </td>
+    </tr>
+}
+
+</table>

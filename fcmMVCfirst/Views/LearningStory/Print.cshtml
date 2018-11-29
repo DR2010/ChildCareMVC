@@ -1,0 +1,119 @@
+﻿@using MackkadoITFramework.ReferenceData
+@model fcmMVCfirst.Models.LearningStory
+
+@{
+    ViewBag.Title = "LearningStoryPrint";
+}
+
+<fieldset>
+    <h1>Learning Story</h1>
+
+    <br/>
+    <div class="display-label">
+        Child Name: 
+    </div>
+    <h3>@Html.DisplayFor(model => model.child.FirstName)</h3>
+
+    <div class="display-label">
+        Educator: 
+    </div>
+    <h3>@Html.DisplayFor(model => model.educator.FirstName)</h3>
+        
+    <div class="display-label">
+        Date: @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <br/>
+    <h2>Story</h2>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Story)
+    </div>
+
+    <br/>
+    <h2>Analysis of Learning</h2>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnalysisOfLearning)
+    </div>
+
+    <br/>
+    <h2>Extensions of Learning</h2>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExtensionOfLearning)
+    </div>
+
+    <br/>
+    <h2>Parents Comments</h2>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentsComments)
+    </div>
+
+    @foreach (var learningItem in CodeValue.ListCodeValues("LEAR"))
+    {
+
+        <br/>
+        <h3>
+            @CodeValue.GetCodeValueDescription("LEAR", @learningItem.ID)
+        </h3>
+        <br/>
+        <table>
+            @foreach (var item in RelatedCodeValue.ListS("LEARLESI", "LEAR", @learningItem.ID))
+            {
+                string n = "LESI," + @item.FKCodeValueTo;
+
+                var showChecked = false;
+                foreach (var learningOutcome in Model.LearningOutcomes)
+                {
+                    if (learningOutcome.FKCodeValue == item.FKCodeValueTo) { 
+                        showChecked = true;
+                        break;
+                    }        
+                }
+                
+                if (! showChecked)
+                {
+                    continue;
+                }
+                else
+                {
+                    <tr>
+                        <td>
+                            - @CodeValue.GetCodeValueDescription("LESI", item.FKCodeValueTo);
+                        </td>
+                    </tr>
+                }
+                
+            }
+        </table>
+        
+        <br/>
+    }
+
+    <h3>Principles</h3>
+        <br/>
+    <table>
+        @foreach (var item in Model.Principles) {
+            <tr>
+                <td>
+                    - @CodeValue.GetCodeValueDescription("PRIN", @item.FKCodeValue)
+                </td>
+            </tr>
+        }
+    </table>
+
+        <br/>
+    <h3>Practices</h3>
+        <br/>
+    <table>
+        @foreach (var item in Model.Practices) {
+        <tr>
+            <td>
+                - @CodeValue.GetCodeValueDescription("PRAC", @item.FKCodeValue)
+            </td>
+        </tr>
+        }
+    </table>
+
+</fieldset>

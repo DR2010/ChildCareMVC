@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="childcareModelStoreContainer" CdmEntityContainer="childcareEntities">
+    <EntitySetMapping Name="children">
+      <EntityTypeMapping TypeName="childcareModel.child">
+        <MappingFragment StoreEntitySet="child">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="AddressStreetName" ColumnName="AddressStreetName" />
+          <ScalarProperty Name="AddressStreetNumber" ColumnName="AddressStreetNumber" />
+          <ScalarProperty Name="AddressSuburb" ColumnName="AddressSuburb" />
+          <ScalarProperty Name="AddressCity" ColumnName="AddressCity" />
+          <ScalarProperty Name="AddressPostCode" ColumnName="AddressPostCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="childrooms">
+      <EntityTypeMapping TypeName="childcareModel.childroom">
+        <MappingFragment StoreEntitySet="childroom">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="FKChildUID" ColumnName="FKChildUID" />
+          <ScalarProperty Name="FKRoomUID" ColumnName="FKRoomUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="incidents">
+      <EntityTypeMapping TypeName="childcareModel.incident">
+        <MappingFragment StoreEntitySet="incident">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="TimeOfIncident" ColumnName="TimeOfIncident" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WasAmbulanceCalled" ColumnName="WasAmbulanceCalled" />
+          <ScalarProperty Name="WasAbleToContactParent" ColumnName="WasAbleToContactParent" />
+          <ScalarProperty Name="NameOfPersonContacted" ColumnName="NameOfPersonContacted" />
+          <ScalarProperty Name="PhoneNumberUsed" ColumnName="PhoneNumberUsed" />
+          <ScalarProperty Name="TimeOfCall" ColumnName="TimeOfCall" />
+          <ScalarProperty Name="FKWorkerTeamLeaderUID" ColumnName="FKWorkerTeamLeaderUID" />
+          <ScalarProperty Name="FKWorkerReportingOfficerUID" ColumnName="FKWorkerReportingOfficerUID" />
+          <ScalarProperty Name="FKChildUID" ColumnName="FKChildUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reports">
+      <EntityTypeMapping TypeName="childcareModel.report">
+        <MappingFragment StoreEntitySet="report">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="MonthYear" ColumnName="MonthYear" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="FKChildUID" ColumnName="FKChildUID" />
+          <ScalarProperty Name="FKWorkerReportingOfficerUID" ColumnName="FKWorkerReportingOfficerUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rooms">
+      <EntityTypeMapping TypeName="childcareModel.room">
+        <MappingFragment StoreEntitySet="room">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AgeGroupName" ColumnName="AgeGroupName" />
+          <ScalarProperty Name="AgeGroupCode" ColumnName="AgeGroupCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="workers">
+      <EntityTypeMapping TypeName="childcareModel.worker">
+        <MappingFragment StoreEntitySet="worker">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="WLVL_Level" ColumnName="WLVL_Level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="workerrooms">
+      <EntityTypeMapping TypeName="childcareModel.workerroom">
+        <MappingFragment StoreEntitySet="workerroom">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="FKWorkerUID" ColumnName="FKWorkerUID" />
+          <ScalarProperty Name="FKRoomUID" ColumnName="FKRoomUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

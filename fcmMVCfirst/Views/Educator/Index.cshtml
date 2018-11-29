@@ -1,0 +1,60 @@
+﻿@model fcmMVCfirst.Models.Educator
+
+@{
+    ViewBag.Title = "Educator List";
+}
+
+<h2>Educator List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            UID
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Level
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.workerList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WLVL_Level)
+        </td>
+
+        @Html.HiddenFor(modelItem => item.UserIdCreatedBy)
+        @Html.HiddenFor(modelItem => item.UserIdUpdatedBy)
+        @Html.HiddenFor(modelItem => item.CreationDateTime)
+        @Html.HiddenFor(modelItem => item.UpdateDateTime)
+        @Html.HiddenFor(modelItem => item.RecordVersion)
+        @Html.HiddenFor(modelItem => item.IsVoid)
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UID })
+        </td>
+    </tr>
+}
+
+</table>

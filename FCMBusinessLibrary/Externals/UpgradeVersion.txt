@@ -1,0 +1,12 @@
+﻿@echo on
+C:
+cd \
+cd \I_Daniel\Dropbox\FCM\FCMExecutable
+
+copy fcm.exe c:\PROGRA~1\FCM
+copy FCMBusinessLibrary.dll c:\PROGRA~1\FCM
+
+pause
+
+fcm.exe
+pause

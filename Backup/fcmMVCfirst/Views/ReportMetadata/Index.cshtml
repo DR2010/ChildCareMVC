@@ -1,0 +1,72 @@
+﻿@model FCMMySQLBusinessLibrary.ReportMetadata
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            UID
+        </th>
+        <th>
+            RecordType
+        </th>
+        <th>
+            FieldCode
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            InformationType
+        </th>
+        <th>
+            Condition
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.reportMetadataList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FieldCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformationType)
+        </td>
+   
+        <td>
+            @Html.DisplayFor(modelItem => item.Condition)
+        </td>
+
+        @Html.HiddenFor(modelItem => item.ClientType)
+        @Html.HiddenFor(modelItem => item.ClientUID)
+        @Html.HiddenFor(modelItem => item.TableName)
+        @Html.HiddenFor(modelItem => item.FieldName)
+        @Html.HiddenFor(modelItem => item.FilePath)
+        @Html.HiddenFor(modelItem => item.FileName)
+        @Html.HiddenFor(modelItem => item.UseAsLabel)
+        @Html.HiddenFor(modelItem => item.CompareWith)
+        @Html.HiddenFor(modelItem => item.RecordType)
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", "ReportMetadata", item, new { @ReportMetadata = "ReportMetadata" }) |
+            @Html.ActionLink("Details", "Details", "ReportMetadata", item, new { @ReportMetadata = "ReportMetadata" }) |
+            @Html.ActionLink("Delete", "Delete", "ReportMetadata", item, new { @ReportMetadata = "ReportMetadata" }) |
+        </td>
+    </tr>
+}
+
+</table>

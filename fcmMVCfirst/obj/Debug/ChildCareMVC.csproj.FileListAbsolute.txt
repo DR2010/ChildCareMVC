@@ -1,0 +1,12 @@
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\fcmMVCfirst.dll
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\fcmMVCfirst.pdb
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\EntityFramework.dll
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\EntityFramework.xml
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\obj\Debug\fcmMVCfirst.dll
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\obj\Debug\fcmMVCfirst.pdb
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\obj\Debug\ChildCareMVC.csprojResolveAssemblyReference.cache
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\PdfReportGenerator.dll
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\itextsharp.dll
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\bin\PdfReportGenerator.pdb
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\obj\Debug\RdlCompile.cache
+C:\I_Daniel\Dropbox\I_Projects\ChildCareMVC\fcmMVCfirst\obj\Debug\RdlCompile.compiled

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFCFA7D2-53D4-406E-B2F7-CD01811CA488}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FCMBusinessLibrary</RootNamespace>
+    <AssemblyName>FCMBusinessLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Word">
+      <HintPath>..\..\..\FCM\ExternalAssemblies\Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BUSClientContract.cs" />
+    <Compile Include="Business\BUSClientDocument.cs" />
+    <Compile Include="Business\BUSClientDocumentGeneration.cs" />
+    <Compile Include="Business\BUSClientDocumentSet.cs" />
+    <Compile Include="Business\BUSClient.cs" />
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="ClientContract\ClientContract.cs" />
+    <Compile Include="ClientDocument\ClientDocument.cs" />
+    <Compile Include="ClientDocument\ClientDocumentVersion.cs" />
+    <Compile Include="ClientDocument\ClientDocumentLink.cs" />
+    <Compile Include="ClientDocument\ClientDocumentLinkList.cs" />
+    <Compile Include="ClientDocument\ClientDocumentSet.cs" />
+    <Compile Include="Client\ClientExtraInformation.cs" />
+    <Compile Include="Client\ClientOtherInfo.cs" />
+    <Compile Include="Client\MSClient.cs" />
+    <Compile Include="Employee\Employee.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Document\DocumentVersion.cs" />
+    <Compile Include="Document\DocumentLink.cs" />
+    <Compile Include="Document\DocumentLinkList.cs" />
+    <Compile Include="Document\DocumentList.cs" />
+    <Compile Include="Document\DocumentSet.cs" />
+    <Compile Include="Document\DocumentSetDocument.cs" />
+    <Compile Include="Document\DocumentSetDocumentLink.cs" />
+    <Compile Include="Document\DocumentSetDocumentLinkList.cs" />
+    <Compile Include="Document\DocumentSetDocumentList.cs" />
+    <Compile Include="Document\DocumentSetList.cs" />
+    <Compile Include="Employee\IEmployee.cs" />
+    <Compile Include="Error Handling\ResponseStatus.cs" />
+    <Compile Include="FCMWord\FCMWordEngine.cs" />
+    <Compile Include="FCMWord\FCMWordReport.cs" />
+    <Compile Include="Business\BUSProcessRequest.cs" />
+    <Content Include="OldVersions\Client.txt" />
+    <Content Include="OldVersions\BUSClient.txt" />
+    <Compile Include="ProcessRequest\ProcessRequestArgument.cs" />
+    <Compile Include="ProcessRequest\ProcessRequestResults.cs" />
+    <Compile Include="Properties\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IOutputMessage.cs" />
+    <Compile Include="Metadata\GlobalMetadata.cs" />
+    <Compile Include="Metadata\ReportMetadata.cs" />
+    <Compile Include="Metadata\ReportMetadataList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Business\BUSReferenceData.cs" />
+    <Compile Include="ReferenceData\CodeType.cs" />
+    <Compile Include="ReferenceData\CodeTypeList.cs" />
+    <Compile Include="ReferenceData\CodeValue.cs" />
+    <Compile Include="ReferenceData\CodeValueList.cs" />
+    <Compile Include="ProcessRequest\ProcessRequest.cs" />
+    <Compile Include="ReferenceData\RelatedCode.cs" />
+    <Compile Include="ReferenceData\RelatedCodeValue.cs" />
+    <Compile Include="Security\BUSUserAccess.cs" />
+    <Compile Include="Security\FCMRole.cs" />
+    <Compile Include="Security\FCMRoleScreen.cs" />
+    <Compile Include="Timesheet\ClientWorkHoursAllocation.cs" />
+    <Compile Include="UserSettings\BUSUserSetting.cs" />
+    <Compile Include="Utils\ConnString.cs" />
+    <Compile Include="ClientDocument\DocumentGeneration.cs" />
+    <Compile Include="APIDocument\ExcelSpreadsheetTasks.cs" />
+    <Compile Include="Utils\FCMConstant.cs" />
+    <Compile Include="Security\FCMUserRole.cs" />
+    <Compile Include="Utils\FCMEmail.cs" />
+    <Compile Include="Utils\FCMXmlConfig.cs" />
+    <Compile Include="Utils\HeaderInfo.cs" />
+    <Compile Include="Utils\LogFile.cs" />
+    <Compile Include="Security\UserAccess.cs" />
+    <Compile Include="Utils\FCMStructures.cs" />
+    <Compile Include="UserSettings\UserSetting.cs" />
+    <Compile Include="Utils\MessageType.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="APIDocument\WordDocumentTasks.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WordIcon.jpg" />
+    <None Include="Resources\FolderIcon.jpg" />
+    <None Include="Resources\ExcelIcon.jpg" />
+    <None Include="Resources\PDFIcon.jpg" />
+    <Content Include="ConfigXML\DesktopConfig.xml" />
+    <Content Include="ConfigXML\HPLaptopConfig.xml" />
+    <Content Include="Externals\UpgradeVersion.txt" />
+    <Content Include="Utils\FCMConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\DataContracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

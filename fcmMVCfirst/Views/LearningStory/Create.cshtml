@@ -1,0 +1,137 @@
+﻿@using MackkadoITFramework.ReferenceData
+@using fcmMVCfirst.Models
+@model fcmMVCfirst.Models.LearningStory
+@{
+    ViewBag.Title = "LearningStoryCreate";
+}
+<h2>Create Learning Story</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", new { id = Model.FKChildUID }, null)
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>LearningStory</legend>
+        @Html.HiddenFor(model => model.FKChildUID)
+        <div class="editor-label">
+            Child Name
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.child.FirstName) @Html.DisplayFor(model => model.child.Surname)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FKRoomCode)
+        </div>
+        @Html.DropDownListFor(
+            x => x.FKRoomCode,
+            new SelectList(Room.ListS(), "UID", "Name"),
+            "-- Select room --"
+        )
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FKEducatorUID)
+        </div>
+        @Html.DropDownListFor(
+            model => model.FKEducatorUID,
+            new SelectList(Educator.ListS(), "UID", "FirstName"),
+            "-- Select educator --"
+        )
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Story)
+        </div>
+        <div class="text-box.multi-line">
+            @Html.TextAreaFor(model => model.Story, new { @class = "editor-label", @cols = 80, @rows = 10 })
+            @Html.ValidationMessageFor(model => model.Story)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnalysisOfLearning)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.AnalysisOfLearning, new { @class = "editor-label", @cols = 80, @rows = 10 })
+            @Html.ValidationMessageFor(model => model.AnalysisOfLearning)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ExtensionOfLearning)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.ExtensionOfLearning, new { @class = "editor-label", @cols = 80, @rows = 10 })
+            @Html.ValidationMessageFor(model => model.ExtensionOfLearning)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ParentsComments)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.ParentsComments, new { @class = "editor-label", @cols = 80, @rows = 10 })
+            @Html.ValidationMessageFor(model => model.ParentsComments)
+        </div>
+
+        @foreach (var learningItem in CodeValue.ListCodeValues("LEAR"))
+        {
+            <h2>
+                <a href=@CodeValue.GetCodeValueExtended("LEAR", @learningItem.ID)>@CodeValue.GetCodeValueDescription("LEAR", @learningItem.ID)</a>
+            </h2>
+
+            <table>
+                @foreach (var item in RelatedCodeValue.ListS("LEARLESI", "LEAR", @learningItem.ID))
+                {
+                    string n = "LESI," + @item.FKCodeValueTo;
+                    <tr>
+                        <td>
+                            <input type="checkbox" name=@n value=@item.FKCodeValueTo>
+                            <a href=@CodeValue.GetCodeValueExtended("LESI", item.FKCodeValueTo)>@CodeValue.GetCodeValueDescription("LESI", item.FKCodeValueTo)</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        <h2>Principles </h2>
+        <table>
+            @foreach (var item in CodeValue.ListCodeValues("PRIN"))
+            {
+                string n = "PRIN," + @item.ID;
+                <tr>
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID>
+                        <a href=@CodeValue.GetCodeValueExtended("PRIN", item.ID)>@CodeValue.GetCodeValueDescription("PRIN", item.ID)
+                        </a></td>
+                </tr>
+            }
+        </table>
+        <h2>Practices </h2>
+        <table>
+            @foreach (var item in CodeValue.ListCodeValues("PRAC"))
+            {
+                string n = "PRAC," + @item.ID;
+                <tr>
+                    <td>
+                        <input type="checkbox" name=@n value=@item.ID>
+                        <a href=@CodeValue.GetCodeValueExtended("PRAC", item.ID)>@CodeValue.GetCodeValueDescription("PRAC", item.ID)
+                        </a></td>
+                </tr>
+            }
+        </table>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index", new { id = Model.FKChildUID }, null)
+</div>

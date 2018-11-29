@@ -1,0 +1,18 @@
+﻿@using fcmMVCfirst.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>System Administration</h2>
+
+
+@if (SessionInfo.CheckIfUserHasRole("ADMIN"))
+{
+    <h3>@Html.ActionLink("Code Type", "Index", "CodeType")</h3>
+    <h3>@Html.ActionLink("User Authorisation", "Index", "SecurityUser")</h3>
+
+}
+
+<h3>@Html.ActionLink("Report Metadata", "Index", "ReportMetadata")</h3>
+
+

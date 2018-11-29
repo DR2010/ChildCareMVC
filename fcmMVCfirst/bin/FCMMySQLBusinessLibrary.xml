@@ -1,0 +1,1726 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FCMMySQLBusinessLibrary</name>
+    </assembly>
+    <members>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.ManagingDirector">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.HealthAndSafetyRep">
+            <summary>
+            HSR1 - Health And Safety Rep
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.OHSEAuditor">
+            <summary>
+            OHSEAUDITOR - OHS Auditor
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.ProjectManager">
+            <summary>
+            PM1 - Project Manager
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.ProjectOHSRepresentative">
+            <summary>
+            POHSEREP - Project OHS Representative
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.SiteManager">
+            <summary>
+            SM1 - Site Manager Name
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.SystemsManager">
+            <summary>
+            SMN1 - Systems Manager Name
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.Supervisor">
+            <summary>
+            SUP1 - Supervisor Name
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.WorkersCompensationCoordinator">
+            <summary>
+            WCPERSON - Workers Compensation Person
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.LeadingHand1">
+            <summary>
+            LH1 - Leading Hand 1
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.LeadingHand2">
+            <summary>
+            LH2 - Leading Hand 2
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee.AdministrationPerson">
+            <summary>
+            ADMINPERSON - Administration Person
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelClient.ClientExtraInformation.DateToEnterOnPolicies">
+            <summary>
+            Date to enter on policies
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.GetLastUID">
+            <summary>
+            Get Last UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.Add">
+            <summary>
+            Add Client Other Information Field
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.Update">
+            <summary>
+            Update Client Other Information Field
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.List(System.Int32)">
+            <summary>
+            List employees
+            </summary>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo.LoadObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.ClientOtherInfo)">
+            <summary>
+            This method loads the information from the sqlreader into the Employee object
+            </summary>
+            <param name="reader"></param>
+            <param name="employee"></param>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.Read">
+            <summary>
+            Get Employee details
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.GetLastUID">
+            <summary>
+            Retrieve last Employee UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.Insert">
+            <summary>
+            Add new Employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.Update">
+            <summary>
+            Update Employee Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.Delete">
+            <summary>
+            Delete Employee 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.List(System.Int32)">
+            <summary>
+            List employees
+            </summary>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,System.String)">
+            <summary>
+            Add Employee parameters to the SQL Command.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClient.Employee.LoadEmployeeObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.Employee)">
+            <summary>
+            This method loads the information from the sqlreader into the Employee object
+            </summary>
+            <param name="reader"></param>
+            <param name="employee"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.#ctor">
+            <summary>
+            Constructor - Basic
+            </summary>
+            <param name="iClientUID"></param>
+            <param name="iClientDocumentSetUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor retrieving client set information
+            </summary>
+            <param name="iClientUID"></param>
+            <param name="iClientDocumentSetUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.#ctor(System.Int32)">
+            <summary>
+            Constructor to set the client
+            </summary>
+            <param name="iClientUID"></param>
+            <param name="iClientDocumentSetUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.GetNumberOfDocuments">
+            <summary>
+            Calculate the number of documents in the set
+            </summary>
+            <param name="iClientID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.AddSubTransaction(MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Create new document set. (Sub transaction)
+            </summary>
+            <param name="connection"></param>
+            <param name="MySqlTransaction"></param>
+            <param name="headerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.ClientDocumentSetFieldString">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.LoadObject(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet,MySql.Data.MySqlClient.MySqlDataReader)">
+            <summary>
+            Load db data into memory
+            </summary>
+            <param name="obj"></param>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet.List(System.Int32,System.String)">
+            <summary>
+            Return a list of document sets for a given client.
+            </summary>
+            <param name="iClientUID"></param>
+            <param name="sortOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.#ctor(System.Int32,System.Int32,MackkadoITFramework.Interfaces.IOutputMessage,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="ClientID"></param>
+            <param name="ClientDocSetID"></param>
+            <param name="UIoutput"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.TBD_GenerateDocumentsForClient(System.Int32,System.Int32,System.String)">
+            <summary>
+            Generate documents selected for a client
+            </summary>
+            <param name="clientID"></param>
+            <param name="clientDocSetID"></param>
+            <param name="uioutput"></param>
+            <param name="overrideDocuments"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateDocumentForClient">
+            <summary>
+            Generate document for client (no treeview required)
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateDocumentsForClient(System.Windows.Forms.TreeNode)">
+            <summary>
+            Generate documents based on tree
+            </summary>
+            <param name="clientID"></param>
+            <param name="clientDocSetID"></param>
+            <param name="uioutput"></param>
+            <param name="overrideDocuments"></param>
+            <param name="documentsTreeNode"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.UpdateDestinationFolder(System.Int32,System.Int32)">
+            <summary>
+            This operation updates the destination folder following the
+            hierarchy of the tree instead of the initial location.
+            </summary>
+            <param name="documentsTreeNode"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateDocumentsController(System.Windows.Forms.TreeNode)">
+            <summary>
+            Generate Documents Controller (Word must be previously initialised
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateDocumentTBD(FCMMySQLBusinessLibrary.scClientDocSetDocLink,System.String,System.String)">
+            <summary>
+            Generate one document - Stop using this one ASAP, replace by GenerateSingleDocument
+            </summary>
+            <param name="doco"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateGroupOfDocuments(System.Collections.Generic.List{System.Int32},System.Boolean)">
+            <summary>
+            Generate selected documents
+            </summary>
+            <param name="clientDocumentUIDList"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateSingleDocument(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Generate single document
+            </summary>
+            <param name="clientDocumentUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelClientDocument.DocumentGeneration.GenerateFullSetForClient(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Generate selected documents
+            </summary>
+            <param name="clientDocumentUIDList"></param>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Model.ModelDocument.Document">
+            <summary>
+            It represents a document, folder or appendix.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.FileName">
+            <summary>
+            It is the file name with extension
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.SourceCode">
+            <summary>
+            Indicates the source of the document. It could be from FCM or a Client Document.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.RecordType">
+            <summary>
+            Indicates if it is a Folder, Document or Appendix
+            </summary>
+            
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.IsProjectPlan">
+            <summary>
+            Indicates if the document is a project plan.
+            Project plans are special and can hold other documents.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.DocumentType">
+            <summary>
+            Indicates the type of document: Word, Excel, PDF, Undefined etc.
+            Use Utils.DocumentType
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.SimpleFileName">
+            <summary>
+            It does not include the prefix (CUID) or version number
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.IsVoid">
+            <summary>
+            Indicates whether the record is logically deleted.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.Status">
+            <summary>
+            Document Status (Draft, Finalised, Deleted)
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Model.ModelDocument.Document.Skip">
+            <summary>
+            Indicate if document has to be skipped during generation
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentVersion.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentVersion.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,System.String)">
+            <summary>
+            Add sql parameters
+            </summary>
+            <param name="command"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentVersion.LoadObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentVersion)">
+            <summary>
+            Load reader information into object
+            </summary>
+            <param name="reader"></param>
+            <param name="documentIssue"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentVersion.DocumentVersionFieldString">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentSet.LoadAllDocuments">
+            <summary>
+            Load document into document set
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentSet.List">
+            <summary>
+            List Document Set
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentSet.ListS">
+            <summary>
+            List Document Set
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentSetDocument.LoadDocumentFromReader(FCMMySQLBusinessLibrary.Model.ModelDocument.Document,System.String,MySql.Data.MySqlClient.MySqlDataReader)">
+            <summary>
+            Load a document from a given reader
+            </summary>
+            <param name="retDocument"></param>
+            <param name="tablePrefix"></param>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.DocumentSetDocument.SQLDocumentConcat(System.String)">
+            <summary>
+            Returns a string to be concatenated with a SQL statement
+            </summary>
+            <param name="tablePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelDocument.MasterSystemDocument.GenerateMasterOfSystemDocuments(System.Windows.Forms.TreeView)">
+            <summary>
+            Generate master of system documents
+            </summary>
+            <param name="tv"></param>
+        </member>
+        <member name="F:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.Enabled">
+            <summary>
+            Indicates whether the metafield is used for the client. Only used for client specific field.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.GetValue">
+            <summary>
+            Returns the value of the metafield
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.GetLastUID">
+            <summary>
+            Retrieve last Report Metadata UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.GetLastUIDSubTransaction(MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Retrieve last Report Metadata UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.Save">
+            <summary>
+            Add or update record.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.SaveSubTransaction(MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Add or update record. Sub Transactional
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.Add">
+            <summary>
+            Add new report metadata
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.AddSubTransaction(MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Add new report metadata
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.Update">
+            <summary>
+            Update metadata table
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.UpdateSubTransaction(MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Update metadata table
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Model.ModelMetadata.ReportMetadata.Read(System.Boolean)">
+            <summary>
+            Read metadata
+            </summary>
+            <param name="CheckOnly"></param>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.ExcelIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.FolderIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.PDFIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Properties.Resources.WordIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.Client">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.ClientContract">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.ClientExtraInformation">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.Document">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.ClientDocument">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.FCMDBFieldName.BackendStatus">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryBackendStatus.RepBackendStatus.Insert(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelBackendStatus.BackendStatus,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Add new Client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryBackendStatus.RepBackendStatus.GetLastUID">
+            <summary>
+            Retrieve last UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.Read(System.Int32)">
+            <summary>
+            Retrieve client document
+            </summary>
+            <param name="clientDocumentUid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.GetRoot(System.Int32,System.Int32)">
+            <summary>
+            Retrieve client document
+            </summary>
+            <param name="clientDocumentUid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.Find(System.Int32,System.Int32,System.Char,System.Int32)">
+            <summary>
+            Get Document for a client. This method locates a ClientDocument using DocumentUID
+            </summary>
+            <param name="documentUID"></param>
+            <param name="clientDocSetUID"></param>
+            <param name="voidRead"></param>
+            <param name="clientUID"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.GetNumberOfDocuments(System.Int32,System.Int32)">
+            <summary>
+            Calculate the number of documents in the set
+            </summary>
+            <param name="clientUID"> </param>
+            <param name="clientDocumentSetUID"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.GetDocumentPath(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument)">
+            <summary>
+            This method returns the complete logical path of a given Client Document.
+            It walk through the structure, up, and then comes down
+            It requires the root to be correctly set.
+            </summary>
+            <param name="clientDocument"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.GetComboIssueNumber(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retrieve combo issue number
+            </summary>
+            <param name="documentCUID"></param>
+            <param name="documentVersionNumber"></param>
+            <param name="clientUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.SetClientDestinationFile(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            It sets all the destination names for a client document from source name.
+            </summary>
+            <param name="documentCUID"></param>
+            <param name="documentVersionNumber"></param>
+            <param name="clientUID"></param>
+            <param name="sourceVersionNumber"> </param>
+            <param name="simpleFileName"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.List(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument,System.Int32,System.Int32,System.String)">
+            <summary>
+            List documents for a client
+            </summary>
+            <param name="clientDocument"></param>
+            <param name="clientID"></param>
+            <param name="clientDocumentSetUID"></param>
+            <param name="condition"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.SQLConcat(System.String)">
+            <summary>
+            Returns a string to be concatenated with a SQL statement
+            </summary>
+            <param name="tablePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClientDocument.RepClientDocument.SetDocumentItem(MySql.Data.MySqlClient.MySqlDataReader,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            partial code
+            </summary>
+            <param name="reader"></param>
+            <param name="prefix"></param>
+            <param name="checkForSourceFile"></param>
+            <param name="checkForDestinationFile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.Read(System.Int32,System.String)">
+            <summary>
+            Get Employee details
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.GetLastUID">
+            <summary>
+            Retrieve last Employee UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.Insert">
+            <summary>
+            Add new Employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.Update">
+            <summary>
+            Update Employee Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.Delete">
+            <summary>
+            Delete Employee 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.List(System.Int32)">
+            <summary>
+            List employees
+            </summary>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,System.String)">
+            <summary>
+            Add Employee parameters to the SQL Command.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepEmployee.LoadEmployeeObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.Employee)">
+            <summary>
+            This method loads the information from the sqlreader into the Employee object
+            </summary>
+            <param name="reader"></param>
+            <param name="employee"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ReadLinkedUser">
+            <summary>
+            Check if user is already connected to a client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ReadLinkedUser(FCMMySQLBusinessLibrary.Model.ModelClient.Client)">
+            <summary>
+            Check if user is already connected to a client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ReadLinkedClient(System.String)">
+            <summary>
+            Check if user is already connected to a client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ReadFieldClient(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ReadFieldRequest)">
+            <summary>
+            Retrieve client's field information
+            </summary>
+            <param name="field">Field name - use Client.FieldName</param>
+            <param name="clientUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.GetClientName(System.Int32)">
+            <summary>
+            Retrieve client's field information
+            </summary>
+            <param name="field">Field name - use Client.FieldName</param>
+            <param name="clientUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.Insert(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.Client,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Add new Client
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.Update(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.Client,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Update client details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.Delete(FCMMySQLBusinessLibrary.Model.ModelClient.Client)">
+            <summary>
+            Logical Delete client
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.IsTheSameRecordVersion(System.Int32,System.Int32)">
+            <summary>
+            Check if the record version is the same. If it is not, deny update
+            </summary>
+            <param name="clientUID"></param>
+            <param name="recordVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.GetClientLogoLocation(System.Int32,MackkadoITFramework.Utils.HeaderInfo,System.String)">
+            <summary>
+            Get Logo location for a client.
+            </summary>
+            <param name="clientUID"></param>
+            <param name="curEnvironment"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.LoadClientObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.Client)">
+            <summary>
+            Load client object
+            </summary>
+            <param name="reader"></param>
+            <param name="client"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.AddSqlParameters(MySql.Data.MySqlClient.MySqlCommand,System.String,MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.Client)">
+            <summary>
+            Add SQL Parameters
+            </summary>
+            <param name="_uid"></param>
+            <param name="command"></param>
+            <param name="action"></param>
+            <param name="headerInfo"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ClientFieldString">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClient.ClientFieldValue">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.Read(System.Int32)">
+            <summary>
+            Get Employee details
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.List(System.Int32)">
+            <summary>
+            List client contracts
+            </summary>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.Insert(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.ClientContract)">
+            <summary>
+            Add new contract
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.Update(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.ClientContract)">
+            <summary>
+            Update Contract
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.Delete(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.ClientContract)">
+            <summary>
+            Delete Employee 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,FCMMySQLBusinessLibrary.Model.ModelClient.ClientContract,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Add Employee parameters to the SQL Command.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientContract.LoadClientContractObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.ClientContract)">
+            <summary>
+            This method loads the information from the sqlreader into the Employee object
+            </summary>
+            <param name="reader"></param>
+            <param name="clientContract"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.Read(FCMMySQLBusinessLibrary.Model.ModelClient.ClientExtraInformation)">
+            <summary>
+            Get Client Extra Information
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.Update(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelClient.ClientExtraInformation,MySql.Data.MySqlClient.MySqlConnection)">
+            <summary>
+            Update client details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.GetLastUID">
+            <summary>
+            Retrieve last UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,System.String,FCMMySQLBusinessLibrary.Model.ModelClient.ClientExtraInformation)">
+            <summary>
+            Add SQL Parameters
+            </summary>
+            <param name="_uid"></param>
+            <param name="command"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.ClientFieldString">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryClient.RepClientExtraInformation.LoadClientObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.Model.ModelClient.ClientExtraInformation)">
+            <summary>
+            Load client object
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument">
+            <summary>
+            It represents a document, folder or appendix.
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.FieldName">
+            <summary>
+            Database fields
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.GetName(System.Int32)">
+            <summary>
+            Retrieve the name of the document
+            </summary>
+            <param name="documentUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.Add(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelDocument.Document)">
+            <summary>
+            Add new Document
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.GetRoot(MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Get Root document. If it does not exits, create a root document.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.Save(MackkadoITFramework.Utils.HeaderInfo,FCMMySQLBusinessLibrary.Model.ModelDocument.Document,System.String)">
+            <summary>
+            Add or Update a record
+            </summary>
+            <param name="type">In case of an update, checks the issue number
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.LoadDocumentFromReader(FCMMySQLBusinessLibrary.Model.ModelDocument.Document,System.String,MySql.Data.MySqlClient.MySqlDataReader)">
+            <summary>
+            Load a document from a given reader
+            </summary>
+            <param name="retDocument"></param>
+            <param name="tablePrefix"></param>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.DocumentFieldString">
+            <summary>
+            Returns a string to be concatenated with a SQL statement
+            </summary>
+            <param name="tablePrefix"></param>
+            <returns></returns>
+            <summary>
+            Document string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocument.UpdateFieldString(System.Int32,System.String,System.String)">
+            <summary>
+            Update single field in document
+            </summary>
+            <param name="UID"></param>
+            <param name="fieldName"></param>
+            <param name="contents"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Repository.RepositoryDocument.RepDocumentSetDocument.SQLDocumentConcat(System.String)">
+            <summary>
+            Returns a string to be concatenated with a SQL statement
+            </summary>
+            <param name="tablePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Resource1">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Resource1.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.Resource1.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.List(FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentListRequest)">
+            <summary>
+            Client document list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ListCD(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument,System.Int32,System.Int32)">
+            <summary>
+            Client document list
+            </summary>
+            <param name="clientDocument"> </param>
+            <param name="clientID"> </param>
+            <param name="clientDocumentSetUID"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentReadS(System.Int32)">
+            <summary>
+            Client document read
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentUpdate(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument)">
+            <summary>
+            Client document update
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentDeleteMultiple(MackkadoITFramework.Utils.HeaderInfo,System.Int32,System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Client document delete multiple
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentDelete(MackkadoITFramework.Utils.HeaderInfo,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Client document delete
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.DeleteFile(System.Int32)">
+            <summary>
+            Delete file
+            </summary>
+            <param name="clientDocumentUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.GetClientDocumentPath(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument)">
+            <summary>
+            Get Client Document Path
+            </summary>
+            <param name="clientDocument"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentListRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentListResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ClientDocumentListCDResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.AssociateDocumentsToClient(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocumentSet,System.Int32,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Associate documents from selected document set to selected client
+            </summary>
+            <param name="clientDocumentSet"> </param>
+            <param name="documentSetUID"></param>
+            <param name="headerInfo"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.GetClientDocumentLocation(System.Int32)">
+            <summary>
+            Retrieve the parent folder for a given document
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ListDocumentsNotInSet(MackkadoITFramework.Utils.HeaderInfo,System.Int32,System.Int32)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.AddDocumentToSet(MackkadoITFramework.Utils.HeaderInfo,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add FCM document to Client Set
+            </summary>
+            <param name="headerInfo"></param>
+            <param name="clientUID"></param>
+            <param name="clientDocumentSetUID"></param>
+            <param name="documentUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.AddNewDocumentToClient(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument)">
+            <summary>
+            This method adds a new document to a client.
+            The document is not a document from the MASTER set. 
+            It is a specific document for the client - it will not be replaced or generated.
+            This client document is not related to a MASTER document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ListClientDocumentsByFolder(System.Int32,System.Int32)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClientDocument.Service.BUSClientDocument.ListDocuments(FCMMySQLBusinessLibrary.Model.ModelClientDocument.ClientDocument,System.Int32,System.Int32)">
+            <summary>
+            Client document list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.Service.SVCClient.Interface.IBUSClientContract">
+            <summary>
+            Interface for Client Contract Business Layer
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Interface.IBUSClientContract.ClientContractAdd(FCMMySQLBusinessLibrary.Service.SVCClient.Contract.ClientContractAddRequest)">
+            <summary>
+            Add Client Contract
+            </summary>
+            <param name="clientAddRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Interface.IBUSClientContract.ClientContractUpdate(FCMMySQLBusinessLibrary.Service.SVCClient.Contract.ClientContractUpdateRequest)">
+            <summary>
+            Update Client Contract
+            </summary>
+            <param name="clientUpdateRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientAdd(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientAddRequest)">
+            <summary>
+            Add client
+            </summary>
+            <param name="headerInfo"> </param>
+            <param name="eventClient"></param>
+            <param name="linkInitialSet"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.AddEmployee(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Add Employee
+            </summary>
+            <param name="clientAddRequest"></param>
+            <param name="employeeName"> </param>
+            <param name="roleType"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.UpdateEmployee(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Update Employee
+            </summary>
+            <param name="clientAddRequest"></param>
+            <param name="employeeName"> </param>
+            <param name="roleType"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.SaveEmployees(System.Int32,FCMMySQLBusinessLibrary.Model.ModelClient.ClientEmployee,System.String)">
+            <summary>
+            Add Employee
+            </summary>
+            <param name="clientAddRequest"></param>
+            <param name="employeeName"> </param>
+            <param name="roleType"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientList(MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            List of clients
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientUpdate(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientUpdateRequest)">
+            <summary>
+            Update client details
+            </summary>
+            <param name="headerInfo"> </param>
+            <param name="eventClient"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientDelete(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientDeleteRequest)">
+            <summary>
+            Client Delete
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="eventClient"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ReadFieldClient(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ReadFieldRequest)">
+            <summary>
+            
+            </summary>
+            <param name="readFieldRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientRead(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientReadRequest)">
+            <summary>
+            Client Read
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="eventClient"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.GetClientName(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="readFieldRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.GetLinkedClient(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="readFieldRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientAddFull(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientAddRequest)">
+            <summary>
+            Add client
+            </summary>
+            <param name="headerInfo"> </param>
+            <param name="eventClient"></param>
+            <param name="linkInitialSet"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientReadFull(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientReadRequest)">
+            <summary>
+            Client Read
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="eventClient"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClient.ClientUpdateFull(FCMMySQLBusinessLibrary.Service.SVCClient.ServiceContract.ClientUpdateRequest)">
+            <summary>
+            Update client details
+            </summary>
+            <param name="headerInfo"> </param>
+            <param name="eventClient"> </param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.ClientContractAdd(FCMMySQLBusinessLibrary.Service.SVCClient.Contract.ClientContractAddRequest)">
+            <summary>
+            Client contract add
+            </summary>
+            <param name="clientContract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.ClientContractList(System.Int32)">
+            <summary>
+            Client contract list
+            </summary>
+            <param name="clientContractUID"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.Read(System.Int32)">
+            <summary>
+            Client contract read
+            </summary>
+            <param name="clientContractUID"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.ClientContractUpdate(FCMMySQLBusinessLibrary.Service.SVCClient.Contract.ClientContractUpdateRequest)">
+            <summary>
+            Update details of a client's contract
+            </summary>
+            <param name="clientContract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.ClientContractDelete(FCMMySQLBusinessLibrary.Service.SVCClient.Contract.ClientContractDeleteRequest)">
+            <summary>
+            Delete a client's contract
+            </summary>
+            <param name="clientContract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientContract.GetValidContractOnDate(System.Int32,System.DateTime)">
+            <summary>
+            Client contract list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientDocumentSet.ClientDocumentSetAdd(MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Add client document set
+            </summary>
+            <param name="eventClient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSClientDocumentSet.ClientDocumentSetList(System.Int32,System.String)">
+            <summary>
+            List document sets for a client 
+            </summary>
+            <param name="eventClient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.Add(MackkadoITFramework.ProcessRequest.ProcessRequest)">
+            <summary>
+            Add Process Request
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.GenerateDocumentClient(System.Int32,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Add Document Generation for Client
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.GenerateDocumentClient(System.Int32,System.Int32,System.String,System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            Add Document Generation for Client
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.AddArgument(MackkadoITFramework.ProcessRequest.ProcessRequestArguments)">
+            <summary>
+            Add Process Request Argument
+            </summary>
+            <param name="processRequestArgument"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.AddArgument(MackkadoITFramework.ProcessRequest.ProcessRequestResults)">
+            <summary>
+            Add process request results
+            </summary>
+            <param name="processRequestResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.ListActiveRequests">
+            <summary>
+            List Active Process Requests
+            </summary>
+            <param name="processRequestResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSProcessRequest.ListUnfinishedRequests">
+            <summary>
+            List Active Process Requests
+            </summary>
+            <param name="processRequestResults"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSReferenceData.GetListScreensForUser(System.String)">
+            <summary>
+            Get List of screens of user
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSReferenceData.ListRelatedCode">
+            <summary>
+            List code value 
+            </summary>
+            <param name="eventClient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCClient.Service.BUSReferenceData.ListRelatedCodeValue">
+            <summary>
+            List complete set of related code value.
+            </summary>
+            <param name="eventClient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentListX(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentListRequest)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentListDocuments(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentListRequest)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.FolderAndDocumentList(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentListRequest)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentListFolders(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentListRequest)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentRead(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentReadRequest)">
+            <summary>
+            Retrieve document details
+            </summary>
+            <param name="documentReadRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.GetRootDocument">
+            <summary>
+            Retrieve document details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.SetToVoid(System.Int32)">
+            <summary>
+            Set document to void
+            </summary>
+            <param name="documentUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DeleteDocument(System.Int32)">
+            <summary>
+            Delete document
+            </summary>
+            <param name="documentUID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentSave(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentSaveRequest)">
+            <summary>
+            Update or Create document
+            </summary>
+            <param name="documentSaveRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentCreate(MackkadoITFramework.Utils.HeaderInfo,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Update or Create document
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentNewVersion(FCMMySQLBusinessLibrary.Service.SVCDocument.ServiceContract.DocumentNewVersionRequest)">
+            <summary>
+            Create new versions
+            </summary>
+            <param name="documentSaveRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocument.DocumentList(MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            List of clients
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocumentSet.DocumentSetList">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocumentSet.DocumentSetRead(System.Int32)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocumentSet.ListDocumentSets">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCDocument.Service.BUSDocumentSet.ListDocumentsNotInSet(MackkadoITFramework.Utils.HeaderInfo,System.Int32)">
+            <summary>
+            List of documents
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCFCMBackendStatus.Service.BUSFCMBackendStatus.ReadLast(MackkadoITFramework.Utils.HeaderInfo,System.String)">
+            <summary>
+            Get last status update for a process
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.Service.SVCFCMBackendStatus.Service.BUSFCMBackendStatus.ReportStatus(MackkadoITFramework.Utils.HeaderInfo,System.String,System.String,System.String)">
+            <summary>
+            Report current process status
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.WordReport.RegisterOfSytemDocuments2(System.Windows.Forms.TreeView,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generate register of systems document using existing file.
+            </summary>
+            <param name="tv"></param>
+            <param name="clientFolder"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.WordReport.RegisterOfSytemDocumentsXXX(System.Windows.Forms.TreeView,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generate word document with register of system documents
+            </summary>
+            <param name="tv"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.Add">
+            <summary>
+            Add new Employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.Update">
+            <summary>
+            Update Employee Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.Delete">
+            <summary>
+            Delete Employee 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.List(System.Int32)">
+            <summary>
+            List employees
+            </summary>
+            <param name="clientID"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.GetLastUID">
+            <summary>
+            Retrieve last Employee UID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.ListOfFields(System.String,System.String)">
+            <summary>
+            Return a string with fields separated by supplied string
+            </summary>
+            <param name="separator"></param>
+            <param name="prefixLine1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand)">
+            <summary>
+            Add Employee parameters to the SQL Command.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.ClientWorkHoursAllocation.LoadObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.ClientWorkHoursAllocation)">
+            <summary>
+            This method loads the information from the sqlreader into the Employee object
+            </summary>
+            <param name="reader"></param>
+            <param name="employee"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.BUSUserSetting.Save(FCMMySQLBusinessLibrary.UserSettings)">
+            <summary>
+            Client document read
+            </summary>
+            <param name="clientContract"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant">
+            <summary>
+            Class with every constant used in the system
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.fcmConfigXml">
+            <summary>
+            It represents the attribute for the database ConnectionString 
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.DataBaseType">
+            <summary>
+            It represents the attribute for the database ConnectionString 
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.Image">
+            <summary>
+            Integer represent the sequence of the image on the Image List.
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.ImageFileName">
+            <summary>
+            This is the name of the image file representing the file type
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.CodeTypeString">
+            <summary>
+            List of code types
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.RoleTypeCode">
+            <summary>
+            List of Role Types
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.SYSFOLDER">
+            <summary>
+            List of folder variables
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.DocumentListMode">
+            <summary>
+            Document list mode
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.ScreenCode">
+            <summary>
+            Screen Codes
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.ScreenControl">
+            <summary>
+            Screen Codes
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.ScreenProperty">
+            <summary>
+            Font Size
+            </summary>
+        </member>
+        <member name="T:FCMMySQLBusinessLibrary.FCMUtils.FCMConstant.SourceCode">
+            <summary>
+            Indicates the source of the document. It could be FCM or Client
+            </summary>
+        </member>
+        <member name="P:FCMMySQLBusinessLibrary.FCMUtils.Utils.UserID">
+            <summary>
+            Read or Write the userID in memory.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.CompareDocuments(System.String,System.String,System.String)">
+            <summary>
+            Compare documents  
+            </summary>
+            <param name="Location"></param>
+            <param name="Name"></param>
+            <param name="Type"></param>
+            <param name="DestinationFile"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.getOppositePath(System.String)">
+            <summary>
+            It returns the opposite path (client to template or vice-versa) 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetClientPathInside(System.String)">
+            <summary>
+            It returns the path of the document inside the client path 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetClientPath(System.String,System.String)">
+            <summary>
+            It returns the Client path 
+            </summary>
+            <param name="path"></param>
+            <param name="destinationPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetVersionPath(System.String)">
+            <summary>
+            It returns the Client path 
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.OpenDocument(FCMMySQLBusinessLibrary.Model.ModelDocument.Document,System.Object,System.Boolean)">
+            <summary>
+            Open document
+            </summary>
+            <param name="document"></param>
+            <param name="vkReadOnly"></param>
+            <param name="isFromWeb"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.ImageSelect(System.String)">
+            <summary>
+            Return image according to Record Type 
+            </summary>
+            <param name="RecordType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetImageUrl(System.String,System.String)">
+            <summary>
+            Get Logo location for a client.
+            </summary>
+            <param name="clientUID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetClientLogoImageSeqNum(System.Int32)">
+            <summary>
+            Return sequence number of the client's logo from the image list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.GetFileImage(System.Char,System.Char,System.String)">
+            <summary>
+            Get image for file
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.UserSettingGetCacheValue(FCMMySQLBusinessLibrary.UserSettings)">
+            <summary>
+            Retrieves cached value for user settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.RefreshCache">
+            <summary>
+            Refresh cache
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.LoadUserSettingsInCache">
+            <summary>
+            Refresh cache
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.FCMUtils.Utils.LoadFolder(System.String,MackkadoITFramework.Interfaces.IOutputMessage,System.Int32,System.Int32,MackkadoITFramework.Utils.HeaderInfo)">
+            <summary>
+            Load folder into FCM Database and into FCM folder
+            </summary>
+            <param name="sourceFolder"></param>
+            <param name="uioutput"></param>
+            <param name="parentUID"></param>
+            <param name="sequenceNumber"></param>
+            <param name="headerInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.#ctor">
+            <summary>
+            Constructor 
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.List(System.String)">
+            <summary>
+            List user settings for a given user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.Save">
+            <summary>
+            Save details. Create or Update accordingly.
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.Read">
+            <summary>
+            Retrieve user setting details
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.LoadClientObject(MySql.Data.MySqlClient.MySqlDataReader,FCMMySQLBusinessLibrary.UserSettings)">
+            <summary>
+            Load client object
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.Update">
+            <summary>
+            Update user setting details
+            </summary>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.Insert">
+            <summary>
+            Add new user setting
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.UserSettingString">
+            <summary>
+            Client string of fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.AddSQLParameters(MySql.Data.MySqlClient.MySqlCommand,System.String)">
+            <summary>
+            Add SQL Parameters
+            </summary>
+            <param name="command"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.SQLConcat">
+            <summary>
+            Returns a string to be concatenated with a SQL statement
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FCMMySQLBusinessLibrary.UserSettings.SetDocumentItem(MySql.Data.MySqlClient.MySqlDataReader)">
+            <summary>
+            Set user setting values
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

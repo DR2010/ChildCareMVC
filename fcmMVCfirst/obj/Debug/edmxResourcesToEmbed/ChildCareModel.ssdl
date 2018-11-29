@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="childcareModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="childcareModelStoreContainer">
+    <EntitySet Name="child" EntityType="childcareModel.Store.child" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="childroom" EntityType="childcareModel.Store.childroom" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="incident" EntityType="childcareModel.Store.incident" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="report" EntityType="childcareModel.Store.report" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="room" EntityType="childcareModel.Store.room" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="worker" EntityType="childcareModel.Store.worker" store:Type="Tables" Schema="childcare" />
+    <EntitySet Name="workerroom" EntityType="childcareModel.Store.workerroom" store:Type="Tables" Schema="childcare" />
+    <AssociationSet Name="FKN_Child" Association="childcareModel.Store.FKN_Child">
+      <End Role="child" EntitySet="child" />
+      <End Role="incident" EntitySet="incident" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ChildRoomIDX1" Association="childcareModel.Store.FKN_ChildRoomIDX1">
+      <End Role="child" EntitySet="child" />
+      <End Role="childroom" EntitySet="childroom" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ChildRoomIDX2" Association="childcareModel.Store.FKN_ChildRoomIDX2">
+      <End Role="room" EntitySet="room" />
+      <End Role="childroom" EntitySet="childroom" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportChildIDX1" Association="childcareModel.Store.FKN_ReportChildIDX1">
+      <End Role="child" EntitySet="child" />
+      <End Role="report" EntitySet="report" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportingOfficer" Association="childcareModel.Store.FKN_ReportingOfficer">
+      <End Role="worker" EntitySet="worker" />
+      <End Role="incident" EntitySet="incident" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportingOfficerIDX2" Association="childcareModel.Store.FKN_ReportingOfficerIDX2">
+      <End Role="worker" EntitySet="worker" />
+      <End Role="report" EntitySet="report" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_Room" Association="childcareModel.Store.FKN_Room">
+      <End Role="room" EntitySet="room" />
+      <End Role="workerroom" EntitySet="workerroom" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_TeamLeader" Association="childcareModel.Store.FKN_TeamLeader">
+      <End Role="worker" EntitySet="worker" />
+      <End Role="incident" EntitySet="incident" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_Worker" Association="childcareModel.Store.FKN_Worker">
+      <End Role="worker" EntitySet="worker" />
+      <End Role="workerroom" EntitySet="workerroom" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="child">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="Surname" Type="varchar" MaxLength="100" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="AddressStreetName" Type="varchar" MaxLength="100" />
+    <Property Name="AddressStreetNumber" Type="varchar" MaxLength="45" />
+    <Property Name="AddressSuburb" Type="varchar" MaxLength="100" />
+    <Property Name="AddressCity" Type="varchar" MaxLength="100" />
+    <Property Name="AddressPostCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="childroom">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="FKChildUID" Type="bigint" />
+    <Property Name="FKRoomUID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="incident">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="IncidentDate" Type="date" />
+    <Property Name="ReportDate" Type="date" />
+    <Property Name="TimeOfIncident" Type="varchar" MaxLength="45" />
+    <Property Name="Description" Type="text" />
+    <Property Name="WasAmbulanceCalled" Type="char" MaxLength="1" />
+    <Property Name="WasAbleToContactParent" Type="char" MaxLength="1" />
+    <Property Name="NameOfPersonContacted" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNumberUsed" Type="varchar" MaxLength="50" />
+    <Property Name="TimeOfCall" Type="varchar" MaxLength="45" />
+    <Property Name="FKWorkerTeamLeaderUID" Type="bigint" />
+    <Property Name="FKWorkerReportingOfficerUID" Type="bigint" />
+    <Property Name="FKChildUID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="report">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="MonthYear" Type="varchar" MaxLength="45" />
+    <Property Name="Summary" Type="varchar" MaxLength="255" />
+    <Property Name="Comments" Type="longtext" />
+    <Property Name="FKChildUID" Type="bigint" />
+    <Property Name="FKWorkerReportingOfficerUID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="45" />
+    <Property Name="AgeGroupName" Type="varchar" MaxLength="45" />
+    <Property Name="AgeGroupCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="worker">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" />
+    <Property Name="WLVL_Level" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="workerroom">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="bigint" Nullable="false" />
+    <Property Name="FKWorkerUID" Type="bigint" />
+    <Property Name="FKRoomUID" Type="bigint" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="IsActive" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <Association Name="FKN_Child">
+    <End Role="child" Type="childcareModel.Store.child" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.Store.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ChildRoomIDX1">
+    <End Role="child" Type="childcareModel.Store.child" Multiplicity="0..1" />
+    <End Role="childroom" Type="childcareModel.Store.childroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="childroom">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ChildRoomIDX2">
+    <End Role="room" Type="childcareModel.Store.room" Multiplicity="0..1" />
+    <End Role="childroom" Type="childcareModel.Store.childroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="room">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="childroom">
+        <PropertyRef Name="FKRoomUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportChildIDX1">
+    <End Role="child" Type="childcareModel.Store.child" Multiplicity="0..1" />
+    <End Role="report" Type="childcareModel.Store.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportingOfficer">
+    <End Role="worker" Type="childcareModel.Store.worker" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.Store.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKWorkerReportingOfficerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportingOfficerIDX2">
+    <End Role="worker" Type="childcareModel.Store.worker" Multiplicity="0..1" />
+    <End Role="report" Type="childcareModel.Store.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="FKWorkerReportingOfficerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_Room">
+    <End Role="room" Type="childcareModel.Store.room" Multiplicity="0..1" />
+    <End Role="workerroom" Type="childcareModel.Store.workerroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="room">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="workerroom">
+        <PropertyRef Name="FKRoomUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_TeamLeader">
+    <End Role="worker" Type="childcareModel.Store.worker" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.Store.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKWorkerTeamLeaderUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_Worker">
+    <End Role="worker" Type="childcareModel.Store.worker" Multiplicity="0..1" />
+    <End Role="workerroom" Type="childcareModel.Store.workerroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="workerroom">
+        <PropertyRef Name="FKWorkerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

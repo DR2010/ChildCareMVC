@@ -1,0 +1,14 @@
+C:\FCM\FCMBusinessLibrary\obj\Release\ResolveAssemblyReference.cache
+C:\FCM\FCMBusinessLibrary\bin\Release\FCMBusinessLibrary.dll
+C:\FCM\FCMBusinessLibrary\bin\Release\FCMBusinessLibrary.pdb
+C:\FCM\FCMBusinessLibrary\obj\Release\FCMBusinessLibrary.dll
+C:\FCM\FCMBusinessLibrary\obj\Release\FCMBusinessLibrary.pdb
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\bin\Release\FCMBusinessLibrary.dll
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\bin\Release\FCMBusinessLibrary.pdb
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\ResolveAssemblyReference.cache
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\FCMBusinessLibrary.Properties.Resource1.resources
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\GenerateResource.read.1.tlog
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\GenerateResource.write.1.tlog
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\FCMBusinessLibrary.dll
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\obj\Release\FCMBusinessLibrary.pdb
+C:\Users\MACHADO\Dropbox\FCM\FCMBusinessLibrary\bin\Release\FCMBusinessLibrary.tlb

@@ -1,0 +1,101 @@
+﻿@using MackkadoITFramework.ReferenceData
+@model fcmMVCfirst.Models.Educator
+
+@{
+    ViewBag.Title = "Update Educator Details";
+}
+
+<h2>Update Educator Details</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Update Educator Details</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UID)
+            @Html.ValidationMessageFor(model => model.UID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Surname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Surname)
+            @Html.ValidationMessageFor(model => model.Surname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WLVL_Level)
+        </div>
+        @Html.DropDownListFor(
+            model => model.WLVL_Level, 
+            new SelectList(CodeValue.ListCodeValues("WLVL"), "ID", "Description"),
+            "-- Select category --"
+        )
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserIdCreatedBy)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.UserIdCreatedBy, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserIdUpdatedBy)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.UserIdUpdatedBy, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreationDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.CreationDateTime, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UpdateDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.UpdateDateTime, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RecordVersion)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.RecordVersion, new { @readonly = true })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsVoid)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.IsVoid, new { @readonly = true })
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

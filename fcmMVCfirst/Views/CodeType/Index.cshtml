@@ -1,0 +1,38 @@
+﻿@model MackkadoITFramework.ReferenceData.CodeType
+@{
+    ViewBag.Title = "Reference Data - Code Type List";
+}
+<h2>
+    Reference Data - Code Type List</h2>
+<p>
+    @Html.ActionLink("New code type", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            code
+        </th>
+        <th>
+            description
+        </th>
+        <th>
+            action
+        </th>
+    </tr>
+    @foreach (var item in Model.codeTypeList)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Code, "Index", "CodeValue", new { id = item.Code }, null)
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Code }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Code }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Code }) | 
+            </td>
+        </tr>
+    }
+</table>

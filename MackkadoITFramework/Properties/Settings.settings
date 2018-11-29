@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MackkadoITFramework.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FrameworkConnection" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=localhost;Port=3306;Database=management;Uid=fcmuser;Pwd=oculos;;AutoEnlist=false&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=localhost;Port=3306;Database=management;Uid=fcmuser;Pwd=oculos;;AutoEnlist=false</Value>
+    </Setting>
+    <Setting Name="SQLConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=TOSHIBA2011\SQLSERVERTOSH,1433;Initial Catalog=management;Integrated Security=SSPI;User ID=service_fcm;Password=service_fcm;MultipleActiveResultSets=True;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=TOSHIBA2011\SQLSERVERTOSH,1433;Initial Catalog=management;Integrated Security=SSPI;User ID=service_fcm;Password=service_fcm;MultipleActiveResultSets=True;</Value>
+    </Setting>
+    <Setting Name="AuditLogPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\TEMP</Value>
+    </Setting>
+    <Setting Name="DefaultDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Local</Value>
+    </Setting>
+    <Setting Name="ApplicationConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Server=localhost;Port=3306;Database=management;Uid=fcmuser;Pwd=oculos;AutoEnlist=false&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Server=localhost;Port=3306;Database=management;Uid=fcmuser;Pwd=oculos;AutoEnlist=false</Value>
+    </Setting>
+    <Setting Name="FCMApplicationConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=TOSHIBA2011\SQLSERVERTOSH,1433;Initial Catalog=management;Integrated Security=SSPI;User ID=service_fcm;Password=service_fcm;MultipleActiveResultSets=True;</Value>
+    </Setting>
+    <Setting Name="ChildCareConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=localhost;Port=3306;Database=childcare;Uid=childcare;Pwd=oculos;AutoEnlist=false;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

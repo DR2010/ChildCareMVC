@@ -1,0 +1,86 @@
+﻿@using System.Web.Mvc.Html
+@model fcmMVCfirst.Models.Child
+
+@{
+    ViewBag.Title = "Children List";
+}
+
+<h2>Children List</h2>
+
+<p>
+    Room: @Html.DisplayFor(modelItem => Model.RoomName) 
+</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.LabelFor(model => model.UID)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.DateOfBirth) 
+        </th>
+        <th>
+            @Html.LabelFor(model => model.RoomName) 
+        </th>
+
+        <th></th>
+    </tr>
+
+    @if (Model == null)
+    {
+        return;
+    }
+
+    @foreach (var item in Model.childList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomName)
+            </td>
+
+            @Html.HiddenFor(modelItem => item.CurrentRoom)
+            @Html.HiddenFor(modelItem => item.AddressStreetName)
+            @Html.HiddenFor(modelItem => item.AddressStreetNumber)
+            @Html.HiddenFor(modelItem => item.AddressSuburb)
+            @Html.HiddenFor(modelItem => item.AddressCity)
+            @Html.HiddenFor(modelItem => item.AddressPostCode)
+            @Html.HiddenFor(modelItem => item.UserIdCreatedBy)
+            @Html.HiddenFor(modelItem => item.UserIdUpdatedBy)
+            @Html.HiddenFor(modelItem => item.CreationDateTime)
+            @Html.HiddenFor(modelItem => item.UpdateDateTime)
+            @Html.HiddenFor(modelItem => item.RecordVersion)
+            @Html.HiddenFor(modelItem => item.IsVoid)
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UID }) |
+                @Html.ActionLink("Reports", "Index", "LearningStory", new { id = item.UID }, null)
+
+            </td>
+        </tr>
+        
+    }
+
+</table>
+

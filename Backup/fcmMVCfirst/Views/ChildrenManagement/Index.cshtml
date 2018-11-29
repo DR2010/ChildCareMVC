@@ -1,0 +1,17 @@
+﻿@using fcmMVCfirst.Models
+@{
+    ViewBag.Title = "Children Management";
+}
+
+<h2>Children Management</h2>
+
+
+@if (SessionInfo.CheckIfUserHasRole("ADMIN"))
+{
+}
+
+<h3>@Html.ActionLink("Add Child", "Index", "CodeType")</h3>
+<h3>@Html.ActionLink("Show Children List", "Index", "UserAuthorisation")</h3>
+
+
+

@@ -1,0 +1,157 @@
+﻿@using MackkadoITFramework.ReferenceData
+@using fcmMVCfirst.Models
+@model fcmMVCfirst.Models.Child
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Child Details</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Child</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UID)
+            @Html.ValidationMessageFor(model => model.UID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Surname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Surname)
+            @Html.ValidationMessageFor(model => model.Surname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateOfBirth)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateOfBirth)
+            @Html.ValidationMessageFor(model => model.DateOfBirth)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CurrentRoom)
+        </div>
+        @Html.DropDownListFor(
+            model => model.CurrentRoom, 
+            new SelectList(Room.ListS(), "UID", "Name"),
+            "-- Select room --"
+        )
+
+@*        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressStreetName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressStreetName)
+            @Html.ValidationMessageFor(model => model.AddressStreetName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressStreetNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressStreetNumber)
+            @Html.ValidationMessageFor(model => model.AddressStreetNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressSuburb)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressSuburb)
+            @Html.ValidationMessageFor(model => model.AddressSuburb)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressCity)
+            @Html.ValidationMessageFor(model => model.AddressCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AddressPostCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AddressPostCode)
+            @Html.ValidationMessageFor(model => model.AddressPostCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserIdCreatedBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserIdCreatedBy)
+            @Html.ValidationMessageFor(model => model.UserIdCreatedBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserIdUpdatedBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserIdUpdatedBy)
+            @Html.ValidationMessageFor(model => model.UserIdUpdatedBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreationDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreationDateTime)
+            @Html.ValidationMessageFor(model => model.CreationDateTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UpdateDateTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UpdateDateTime)
+            @Html.ValidationMessageFor(model => model.UpdateDateTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RecordVersion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RecordVersion)
+            @Html.ValidationMessageFor(model => model.RecordVersion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsVoid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsVoid)
+            @Html.ValidationMessageFor(model => model.IsVoid)
+        </div>*@
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", new { /* id = Model.UID */ }, null)
+
+</div>

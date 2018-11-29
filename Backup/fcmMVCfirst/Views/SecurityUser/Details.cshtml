@@ -1,0 +1,31 @@
+﻿@model MackkadoITFramework.Security.UserAccess
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>UserAccess</legend>
+
+    <div class="display-label">UserID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserID)
+    </div>
+
+    <div class="display-label">UserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">LogonAttempts</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LogonAttempts)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", "SecurityUser", Model, new { @SecurityUser = "SecurityUser" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

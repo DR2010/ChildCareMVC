@@ -1,0 +1,101 @@
+﻿@using MackkadoITFramework.ReferenceData
+@using fcmMVCfirst.Models
+@model fcmMVCfirst.Models.Child
+
+@{
+    ViewBag.Title = "ChildDetails";
+}
+
+<h2>View Child Details</h2>
+
+<fieldset>
+    <legend>Child</legend>
+
+    <div class="display-label">UID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UID)
+    </div>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">Surname</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Surname)
+    </div>
+
+    <div class="display-label">DateOfBirth</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CurrentRoom)
+        </div>
+        @Html.DropDownListFor(
+            model => model.CurrentRoom, 
+            new SelectList(Room.ListS(), "UID", "Name"),
+            "-- Select room --"
+        )
+
+@*    <div class="display-label">AddressStreetName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressStreetName)
+    </div>
+
+    <div class="display-label">AddressStreetNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressStreetNumber)
+    </div>
+
+    <div class="display-label">AddressSuburb</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressSuburb)
+    </div>
+
+    <div class="display-label">AddressCity</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressCity)
+    </div>
+
+    <div class="display-label">AddressPostCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressPostCode)
+    </div>
+
+    <div class="display-label">UserIdCreatedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserIdCreatedBy)
+    </div>
+
+    <div class="display-label">UserIdUpdatedBy</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserIdUpdatedBy)
+    </div>
+
+    <div class="display-label">CreationDateTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDateTime)
+    </div>
+
+    <div class="display-label">UpdateDateTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UpdateDateTime)
+    </div>
+
+    <div class="display-label">RecordVersion</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordVersion)
+    </div>
+
+    <div class="display-label">IsVoid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsVoid)
+    </div>*@
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

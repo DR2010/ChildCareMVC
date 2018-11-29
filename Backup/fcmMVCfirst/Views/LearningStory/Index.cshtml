@@ -1,0 +1,85 @@
+﻿@model fcmMVCfirst.Models.LearningStory
+
+@{
+    ViewBag.Title = "Learning Story - List";
+}
+
+<h2>Learning Story - List</h2>
+
+<p>
+
+    @Html.ActionLink("Create New", "Create", "LearningStory", Model.child, new { @Child = "Child" }) 
+</p>
+
+<p>
+    Child: @Html.DisplayFor(modelItem => Model.child.FirstName) 
+</p>
+
+<table>
+    <tr>
+        <th>
+            @Html.LabelFor(model => model.UID)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.child.FirstName)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.child.Surname)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.FKRoomCode)
+        </th>
+        <th>
+            @Html.LabelFor(model => model.Date)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @if (Model == null) { return; }
+    
+    @foreach (var item in Model.LearningStoryList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.child.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.child.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.child.RoomName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+        
+            @Html.HiddenFor(modelItem => item.FKRoomCode)
+            @Html.HiddenFor(modelItem => item.FKChildUID)
+            @Html.HiddenFor(modelItem => item.Story)
+            @Html.HiddenFor(modelItem => item.AnalysisOfLearning)
+            @Html.HiddenFor(modelItem => item.ExtensionOfLearning)
+            @Html.HiddenFor(modelItem => item.ParentsComments)
+
+            @Html.HiddenFor(modelItem => item.UserIdUpdatedBy)
+            @Html.HiddenFor(modelItem => item.CreationDateTime)
+            @Html.HiddenFor(modelItem => item.UpdateDateTime)
+            @Html.HiddenFor(modelItem => item.RecordVersion)
+            @Html.HiddenFor(modelItem => item.IsVoid)
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.UID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UID }) |
+                @Html.ActionLink("Print", "Print", new { id = item.UID }) 
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<br/>
+@Html.ActionLink("Back", "Index", "Child" )

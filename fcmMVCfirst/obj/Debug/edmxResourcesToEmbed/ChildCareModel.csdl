@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="childcareModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="childcareEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="children" EntityType="childcareModel.child" />
+    <EntitySet Name="childrooms" EntityType="childcareModel.childroom" />
+    <EntitySet Name="incidents" EntityType="childcareModel.incident" />
+    <EntitySet Name="reports" EntityType="childcareModel.report" />
+    <EntitySet Name="rooms" EntityType="childcareModel.room" />
+    <EntitySet Name="workers" EntityType="childcareModel.worker" />
+    <EntitySet Name="workerrooms" EntityType="childcareModel.workerroom" />
+    <AssociationSet Name="FKN_Child" Association="childcareModel.FKN_Child">
+      <End Role="child" EntitySet="children" />
+      <End Role="incident" EntitySet="incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ChildRoomIDX1" Association="childcareModel.FKN_ChildRoomIDX1">
+      <End Role="child" EntitySet="children" />
+      <End Role="childroom" EntitySet="childrooms" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportChildIDX1" Association="childcareModel.FKN_ReportChildIDX1">
+      <End Role="child" EntitySet="children" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ChildRoomIDX2" Association="childcareModel.FKN_ChildRoomIDX2">
+      <End Role="room" EntitySet="rooms" />
+      <End Role="childroom" EntitySet="childrooms" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportingOfficer" Association="childcareModel.FKN_ReportingOfficer">
+      <End Role="worker" EntitySet="workers" />
+      <End Role="incident" EntitySet="incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_TeamLeader" Association="childcareModel.FKN_TeamLeader">
+      <End Role="worker" EntitySet="workers" />
+      <End Role="incident" EntitySet="incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_ReportingOfficerIDX2" Association="childcareModel.FKN_ReportingOfficerIDX2">
+      <End Role="worker" EntitySet="workers" />
+      <End Role="report" EntitySet="reports" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_Room" Association="childcareModel.FKN_Room">
+      <End Role="room" EntitySet="rooms" />
+      <End Role="workerroom" EntitySet="workerrooms" />
+    </AssociationSet>
+    <AssociationSet Name="FKN_Worker" Association="childcareModel.FKN_Worker">
+      <End Role="worker" EntitySet="workers" />
+      <End Role="workerroom" EntitySet="workerrooms" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="child">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="FirstName" Type="String" />
+    <Property Name="Surname" Type="String" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="AddressStreetName" Type="String" />
+    <Property Name="AddressStreetNumber" Type="String" />
+    <Property Name="AddressSuburb" Type="String" />
+    <Property Name="AddressCity" Type="String" />
+    <Property Name="AddressPostCode" Type="String" />
+    <NavigationProperty Name="incidents" Relationship="childcareModel.FKN_Child" FromRole="child" ToRole="incident" />
+    <NavigationProperty Name="childrooms" Relationship="childcareModel.FKN_ChildRoomIDX1" FromRole="child" ToRole="childroom" />
+    <NavigationProperty Name="reports" Relationship="childcareModel.FKN_ReportChildIDX1" FromRole="child" ToRole="report" />
+  </EntityType>
+  <EntityType Name="childroom">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="FKChildUID" Type="Int64" />
+    <Property Name="FKRoomUID" Type="Int64" />
+    <NavigationProperty Name="child" Relationship="childcareModel.FKN_ChildRoomIDX1" FromRole="childroom" ToRole="child" />
+    <NavigationProperty Name="room" Relationship="childcareModel.FKN_ChildRoomIDX2" FromRole="childroom" ToRole="room" />
+  </EntityType>
+  <EntityType Name="incident">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="IncidentDate" Type="DateTime" />
+    <Property Name="ReportDate" Type="DateTime" />
+    <Property Name="TimeOfIncident" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="WasAmbulanceCalled" Type="String" />
+    <Property Name="WasAbleToContactParent" Type="String" />
+    <Property Name="NameOfPersonContacted" Type="String" />
+    <Property Name="PhoneNumberUsed" Type="String" />
+    <Property Name="TimeOfCall" Type="String" />
+    <Property Name="FKWorkerTeamLeaderUID" Type="Int64" />
+    <Property Name="FKWorkerReportingOfficerUID" Type="Int64" />
+    <Property Name="FKChildUID" Type="Int64" />
+    <NavigationProperty Name="child" Relationship="childcareModel.FKN_Child" FromRole="incident" ToRole="child" />
+    <NavigationProperty Name="worker" Relationship="childcareModel.FKN_ReportingOfficer" FromRole="incident" ToRole="worker" />
+    <NavigationProperty Name="worker1" Relationship="childcareModel.FKN_TeamLeader" FromRole="incident" ToRole="worker" />
+  </EntityType>
+  <EntityType Name="report">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="MonthYear" Type="String" />
+    <Property Name="Summary" Type="String" />
+    <Property Name="Comments" Type="String" />
+    <Property Name="FKChildUID" Type="Int64" />
+    <Property Name="FKWorkerReportingOfficerUID" Type="Int64" />
+    <NavigationProperty Name="child" Relationship="childcareModel.FKN_ReportChildIDX1" FromRole="report" ToRole="child" />
+    <NavigationProperty Name="worker" Relationship="childcareModel.FKN_ReportingOfficerIDX2" FromRole="report" ToRole="worker" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" />
+    <Property Name="AgeGroupName" Type="String" />
+    <Property Name="AgeGroupCode" Type="String" />
+    <NavigationProperty Name="childrooms" Relationship="childcareModel.FKN_ChildRoomIDX2" FromRole="room" ToRole="childroom" />
+    <NavigationProperty Name="workerrooms" Relationship="childcareModel.FKN_Room" FromRole="room" ToRole="workerroom" />
+  </EntityType>
+  <EntityType Name="worker">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="FirstName" Type="String" />
+    <Property Name="Surname" Type="String" />
+    <Property Name="WLVL_Level" Type="String" />
+    <NavigationProperty Name="incidents" Relationship="childcareModel.FKN_ReportingOfficer" FromRole="worker" ToRole="incident" />
+    <NavigationProperty Name="incidents1" Relationship="childcareModel.FKN_TeamLeader" FromRole="worker" ToRole="incident" />
+    <NavigationProperty Name="reports" Relationship="childcareModel.FKN_ReportingOfficerIDX2" FromRole="worker" ToRole="report" />
+    <NavigationProperty Name="workerrooms" Relationship="childcareModel.FKN_Worker" FromRole="worker" ToRole="workerroom" />
+  </EntityType>
+  <EntityType Name="workerroom">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int64" Nullable="false" />
+    <Property Name="FKWorkerUID" Type="Int64" />
+    <Property Name="FKRoomUID" Type="Int64" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="IsActive" Type="String" />
+    <NavigationProperty Name="room" Relationship="childcareModel.FKN_Room" FromRole="workerroom" ToRole="room" />
+    <NavigationProperty Name="worker" Relationship="childcareModel.FKN_Worker" FromRole="workerroom" ToRole="worker" />
+  </EntityType>
+  <Association Name="FKN_Child">
+    <End Role="child" Type="childcareModel.child" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ChildRoomIDX1">
+    <End Role="child" Type="childcareModel.child" Multiplicity="0..1" />
+    <End Role="childroom" Type="childcareModel.childroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="childroom">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportChildIDX1">
+    <End Role="child" Type="childcareModel.child" Multiplicity="0..1" />
+    <End Role="report" Type="childcareModel.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="child">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="FKChildUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ChildRoomIDX2">
+    <End Role="room" Type="childcareModel.room" Multiplicity="0..1" />
+    <End Role="childroom" Type="childcareModel.childroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="room">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="childroom">
+        <PropertyRef Name="FKRoomUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportingOfficer">
+    <End Role="worker" Type="childcareModel.worker" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKWorkerReportingOfficerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_TeamLeader">
+    <End Role="worker" Type="childcareModel.worker" Multiplicity="0..1" />
+    <End Role="incident" Type="childcareModel.incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="incident">
+        <PropertyRef Name="FKWorkerTeamLeaderUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_ReportingOfficerIDX2">
+    <End Role="worker" Type="childcareModel.worker" Multiplicity="0..1" />
+    <End Role="report" Type="childcareModel.report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="report">
+        <PropertyRef Name="FKWorkerReportingOfficerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_Room">
+    <End Role="room" Type="childcareModel.room" Multiplicity="0..1" />
+    <End Role="workerroom" Type="childcareModel.workerroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="room">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="workerroom">
+        <PropertyRef Name="FKRoomUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKN_Worker">
+    <End Role="worker" Type="childcareModel.worker" Multiplicity="0..1" />
+    <End Role="workerroom" Type="childcareModel.workerroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="workerroom">
+        <PropertyRef Name="FKWorkerUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

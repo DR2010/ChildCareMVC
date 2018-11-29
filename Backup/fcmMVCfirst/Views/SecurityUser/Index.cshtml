@@ -1,0 +1,50 @@
+﻿@model MackkadoITFramework.Security.UserAccess
+
+@{
+    ViewBag.Title = "User List";
+}
+
+<h2>User List</h2>
+
+<table>
+    <tr>
+        <th>
+            User ID
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Logon Attempts
+        </th>
+    </tr>
+
+@foreach (var item in Model.ListOfUsers) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogonAttempts)
+        </td>
+        
+        @Html.HiddenFor(modelItem => item.Salt)
+        @Html.HiddenFor(modelItem => item.Password)
+        @Html.HiddenFor(modelItem => item.PasswordRetype)
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", "SecurityUser", item, new { @UserAccess = "UserAccess" }) |
+            @Html.ActionLink("Details", "Details", "SecurityUser", item , new { @UserAccess = "UserAccess" }) |
+            @Html.ActionLink("Delete", "Delete", "SecurityUser", item, new { @UserAccess = "UserAccess" }) |
+@*            @Html.ActionLink("Roles", "Index", "SecurityUserRole", item, new { @UserAccess = "UserAccess" }) *@
+            @Html.ActionLink("Roles", "Index", "SecurityUserRole", new { id = item.UserID }, null)
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,69 @@
+﻿@model MackkadoITFramework.ReferenceData.CodeValue
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Code Value List</h2> 
+<p>
+    @Html.ActionLink("Create New", "Create", "CodeValue", new { id = Model.ListForCodeType }, null)
+    
+    @* The syntax below is important!!! The last null makes .net call the correct method to pass the information correctly. *@ 
+    @* @Html.ActionLink("Create New", "Create", "CodeValue", new { id = Model.ListForCodeType }, null) *@ 
+
+
+</p>
+<p>
+    Code Type: @Html.DisplayFor(modelItem => Model.ListForCodeType) 
+</p>
+<table>
+    <tr>
+        <th>
+            Code Type
+        </th>
+        <th>
+            ID
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Abbreviation
+        </th>
+        <th>
+            Value Extended
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.codeValueList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FKCodeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abbreviation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValueExtended)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "CodeValue", item, new { @CodeValue = "CodeValue" }) |
+            @Html.ActionLink("Details", "Details", "CodeValue", item , new { @CodeValue = "CodeValue" }) |
+            @Html.ActionLink("Delete", "Delete", "CodeValue", item, new { @CodeValue = "CodeValue" }) |
+            @* @Html.ActionLink("Delete", "Delete", new { id=item.ID }) *@
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index", "CodeType" )
+</p>

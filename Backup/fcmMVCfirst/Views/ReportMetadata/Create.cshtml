@@ -1,0 +1,137 @@
+﻿@model FCMMySQLBusinessLibrary.ReportMetadata
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>ReportMetadata</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UID)
+            @Html.ValidationMessageFor(model => model.UID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RecordType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RecordType)
+            @Html.ValidationMessageFor(model => model.RecordType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FieldCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FieldCode)
+            @Html.ValidationMessageFor(model => model.FieldCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ClientType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClientType)
+            @Html.ValidationMessageFor(model => model.ClientType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ClientUID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClientUID)
+            @Html.ValidationMessageFor(model => model.ClientUID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InformationType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InformationType)
+            @Html.ValidationMessageFor(model => model.InformationType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TableName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TableName)
+            @Html.ValidationMessageFor(model => model.TableName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FieldName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FieldName)
+            @Html.ValidationMessageFor(model => model.FieldName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FilePath)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FilePath)
+            @Html.ValidationMessageFor(model => model.FilePath)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FileName)
+            @Html.ValidationMessageFor(model => model.FileName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Condition)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Condition)
+            @Html.ValidationMessageFor(model => model.Condition)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompareWith)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompareWith)
+            @Html.ValidationMessageFor(model => model.CompareWith)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UseAsLabel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UseAsLabel)
+            @Html.ValidationMessageFor(model => model.UseAsLabel)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
